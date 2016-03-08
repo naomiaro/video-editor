@@ -1,0 +1,38 @@
+{
+  "name": "video-editor",
+  "version": "0.0.1",
+  "description": "In browser video editor",
+  "website": "http://naomiaro.github.io",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naomiaro/video-editor.git"
+  },
+  "keywords": [
+    "video",
+    "editor"
+  ],
+  "author": "Naomi Aro <naomiaro@gmail.com> (http://naomiaro.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naomiaro/video-editor/issues"
+  },
+  "homepage": "https://github.com/naomiaro/video-editor#readme",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-0": "^6.3.13",
+    "parallel-webpack": "^1.3.1",
+    "webpack": "^1.12.14"
+  }
+}
