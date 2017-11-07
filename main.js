@@ -4,11 +4,12 @@ class VideoGreenScreen {
         this.video = document.getElementById("video");
         this.c1 = document.getElementById("c1");
         this.ctx1 = this.c1.getContext("2d");
+        this.c1.width = this.video.videoWidth / 2;
+        this.c1.height = this.video.videoHeight / 2;
 
         this.video.addEventListener("play", () => {
             this.timerCallback();
-            this.c1.width = this.video.videoWidth / 2;
-            this.c1.height = this.video.videoHeight / 2;
+            
         }, false);
 
         this.video.addEventListener("seeked", () => {
@@ -29,9 +30,8 @@ class VideoGreenScreen {
             return;
         }
 
-        this.computeFrame();
-
-        window.requestAnimationFrame(() => {
+        window.requestAnimationFrame((timestamp) => {
+            this.computeFrame();
             this.timerCallback();
         });
     }
