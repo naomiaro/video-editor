@@ -6,10 +6,6 @@
         background: black;
         color:#CCCCCC; 
       }
-      #c2 {
-        background-image: url(foo.png);
-        background-repeat: no-repeat;
-      }
       div {
         float: left;
         border :1px solid #444444;
@@ -17,16 +13,24 @@
         margin: 10px;
         background:#3B3B3B;
       }
+      video {
+        display: none;
+      }
+      canvas {
+        background: white;
+      }
+      span {
+        color: white;
+      }
     </style>
     <script type="text/javascript" src="video-editor.var.js"></script>
   </head>
 
   <body onload="VideoEditor.init()">
-    <div>
-      <video id="video" width="320" src="cat.mp4" controls="true"/>
-    </div>
+    <video id="video" width="320" src="cat.mp4" controls="true"></video>
     <div>
       <canvas id="c1"></canvas>
+      <div><span class="play">PLAY</span><span class="pause">PAUSE</span></div>
     </div>
   </body>
 </html>

@@ -7,17 +7,21 @@ class VideoGreenScreen {
 
         this.video.addEventListener("play", () => {
             this.timerCallback();
-            this.c1.width = this.video.videoWidth;
-            this.c1.height = this.video.videoHeight;
-            console.log(this.video.videoWidth);
-            console.log(this.video.videoHeight);
-            console.log(this.video.width);
-            console.log(this.video.height);
+            this.c1.width = this.video.videoWidth / 2;
+            this.c1.height = this.video.videoHeight / 2;
         }, false);
 
         this.video.addEventListener("seeked", () => {
             this.computeFrame();
         }, false);
+
+        document.querySelector('.play').addEventListener("click", () => {
+            this.video.play();
+        });
+
+        document.querySelector('.pause').addEventListener("click", () => {
+            this.video.pause();
+        })
     }
 
     timerCallback() {
